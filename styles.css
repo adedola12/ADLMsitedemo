@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Global Tags */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgb(50, 50, 143);
+}
+
+span {
+    font-size: .9rem;
+    color: black;
+}
+
+h6 {
+    font-size: 1.1rem;
+    color: rgb(25, 25, 129)
+}
+
+/* navigation */
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(239, 241, 245);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vw 1vw;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+nav img {
+    width: 150px;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+nav .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    box-align: center
+}
+
+nav .navigation ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav .navigation ul li a {
+    text-decoration: none;
+    color: rgb(61, 61, 116);
+    font-weight: 800;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+nav .navigation ul li a:hover {
+    color: rgb(174, 201, 23);
+}
+
+/* HOME */
+
+#home {
+    background-image: linear-gradient(rgba(30, 63, 124, 0.432), rgba(184, 187, 41, 0.712)), url("images/bg1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#home h2{
+    color: azure;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+#home p{
+    width:50%;
+    color: azure;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+#home .btn {
+    margin-top: 10px;
+}
+
+#home a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background: white;
+    font-weight: 60px;
+    border-radius: 5px;
+}
+
+#home a.blue {
+    color:rgb(239, 241, 245);
+    background:rgb(61, 61, 116);
+    transition: 0.3s ease;
+}
+ 
+#home a.blue:hover {
+    color:rgb(7, 32, 80);
+    background:rgb(187, 187, 207);
+}
+
+#home a.yellow {
+    color:rgb(0, 0, 0);
+    background:rgb(238, 219, 9);
+    transition: 0.3s ease;
+}
+
+#home a.yellow:hover {
+    color:rgb(255, 255, 255);
+    background:rgb(34, 27, 119);
+}
+
+/* Features */
+
+#features{
+    padding: 5vw 8vw 2vw 8wv;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#features .fea-base {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) ;
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+#features .fea-box{
+    background: rgb(186, 209, 224);
+    text-align: start;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#features .fea-box i{
+    font-size: 2.3rem;
+    color: rgb(21, 49, 82);
+}
+
+#features .fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(31, 80, 145);
+    padding: 13px 0px 7px 0px;
+}
+
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(31, 80, 145);
+}
+
+/* Popular Courses */
+
+
+#courses .cor-base {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) ;
+    grid-gap: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 32px 0 rgba(233, 238, 240, 0.329);
+}
+
+#courses .cor-box{
+    background: rgb(224, 233, 240);
+    text-align: start;
+    height: 100%;
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+#courses .cor-box img{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+#courses .cor-box .cor-det {
+    padding: 15px 15px 0px 15px;
+}
+
+#courses .cor-box .cor-det i {
+    color: rgb(255, 208, 0);
+    font-size: 0.9rem;
+}
+
+#courses .cor-box .cost{
+    background-color: rgb(43, 153, 226);
+    color: rgb(247, 248, 248);
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-weight: 70px;
+    border-radius: 50%;
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    
+}
+
+/* Register */
+
+#register {
+    padding: 6vw 25vw 6vw 8vw;
+    background-image: linear-gradient(rgba(71, 131, 243, 0.432),rgba(245, 247, 142, 0.712)), url("images/bg2.jpg");
+    width: 120%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+#register .reminder {
+    color: rgb(255, 255, 255);
+}
+
+#register .reminder h2 {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+#register .reminder .time{
+    display: flex;
+    margin-top: 40px;
+
+}
+
+#register .reminder .time .date {
+    text-align: center;
+    padding: 13px 33px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(243, 243, 243);
+    background: rgba(240, 233, 233, 0.274); 
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(233, 238, 240, 0.329);
+    margin: 0 5px 10px 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(241, 239, 239, 0.116);
+}
+
+#register .form{
+    background-color: aliceblue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(233, 238, 240, 0.329);
+    margin: 0;
+}
+
+#register .form .btn {
+    margin-top: 20px;
+}
+
+#register .form input{
+    margin: 15px 0;
+    padding: 15px 10px;
+    border: 1px solid rgb(21, 49, 82);
+    outline: none;
+}
+
+#register .form input ::placeholder{
+   color: rgb(90, 86, 86);
+   font-weight: 500;
+   font-size: 0.9rem;
+}
+
+#register .form .btn a.yellow{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background: white;
+    font-weight: 60px;
+    border-radius: 5px;
+    color:rgb(0, 0, 0);
+    background:rgb(238, 219, 9);
+    transition: 0.3s ease;
+}
+
+#register .form .btn a.yellow:hover {
+    color:rgb(255, 255, 255);
+    background:rgb(34, 27, 119);
+}
+
+/* Profile */
+
+#profiles {
+    padding: 8vw 8vw 0vw 8vw;
+    text-align: center;
+
+}
+
+#profiles .tut-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+    grid-gap: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 32px 0 rgba(233, 238, 240, 0.329);
+}
+
+#profiles  .tut-box .tutor {
+    background: rgb(224, 233, 240);
+    padding: 30px 10px;
+}
+
+#profiles  .tut-box .tutor .media {
+    margin-top: 10px;
+}
+
+#profiles  .tut-box .tutor .media i {
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 49, 82);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#profiles  .tut-box .tutor .media i:hover {
+    background: rgb(21, 49, 82);
+    color: azure;
+    border: 1px solid rgb(199, 218, 28);
+    cursor: pointer;
+}
+
+#profiles  .tutor img{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+Footer {
+    padding: 8vw;
+    background-color: rgb(12, 52, 139);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+Footer .footer-col{
+padding-bottom: 40px;
+}
+
+Footer h3{
+    color: aliceblue;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+Footer li{
+    list-style: none;
+    color: rgb(116, 116, 116);
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3S ease;
+}
+
+Footer li:hover {
+    color: aliceblue;
+
+}
+
+Footer p {
+    color: rgb(116, 116, 116);
+}
+
+Footer .subscribe {
+    margin-top: 20px;
+}
+
+Footer input{
+    width:  220px;
+    padding: 15px 12px;
+    background-color: rgb(168, 159, 159);
+    border: none;
+    outline: none;
+    color: antiquewhite;
+
+}
+
+Footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 15px;
+    background: white;
+    font-weight: 60px;
+    border-radius: 5px;
+}
+
+Footer .subscribe a.yellow{
+    color:rgb(0, 0, 0);
+    background:rgb(238, 219, 9);
+    transition: 0.3s ease;
+}
+
+Footer .subscribe a.yellow:hover{
+    color:rgb(255, 255, 255);
+    background:rgb(34, 27, 119);
+}
+
+Footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+Footer .copyright p{
+    color: aliceblue;
+}
+
+Footer .copyright i {
+    background-color: aliceblue;
+    padding: 10px 13px;
+    border: 1px solid rgb(224, 224, 224);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+Footer .copyright i:hover {
+    background-color: rgb(3, 37, 71);
+    color: rgb(95, 134, 192);
+    border: 1px solid rgb(199, 218, 28);
+    cursor: pointer;
+}
