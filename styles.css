@@ -44,12 +44,27 @@ nav {
     align-items: center;
     padding: 0.5vw 1vw;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    z-index: 999;
 }
 
 nav img {
-    width: 150px;
+    width: 130px;
     cursor: pointer;
     margin-top: 0;
+}
+
+nav .navigation {
+    display: flex;
+}
+
+#menu-btn {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#menu-cls {
+    display: none;
 }
 
 nav .navigation ul {
@@ -69,6 +84,10 @@ nav .navigation ul li a {
     font-weight: 800;
     font-size: 16px;
     transition: 0.3s ease;
+}
+
+nav .navigation ul li a .active {
+    color: rgb(174, 201, 23);
 }
 
 nav .navigation ul li a:hover {
@@ -142,9 +161,11 @@ nav .navigation ul li a:hover {
 /* Features */
 
 #features{
-    padding: 5vw 8vw 2vw 8wv;
+    padding: 5vw 15vw 5vw 8wv;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #features .fea-base {
@@ -181,14 +202,20 @@ nav .navigation ul li a:hover {
 
 /* Popular Courses */
 
+#courses {
+    text-align: center;
+    padding: 8vw 8vw 8vw 8vw;
+}
+
 
 #courses .cor-base {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) ;
     grid-gap: 1rem;
     margin-top: 50px;
     margin-bottom: 50px;
     box-shadow: 0 8px 32px 0 rgba(233, 238, 240, 0.329);
+
 }
 
 #courses .cor-box{
@@ -324,7 +351,7 @@ nav .navigation ul li a:hover {
 /* Profile */
 
 #profiles {
-    padding: 8vw 8vw 0vw 8vw;
+    padding: 8vw 8vw 8vw 8vw;
     text-align: center;
 
 }
@@ -468,4 +495,107 @@ Footer .copyright i:hover {
     color: rgb(95, 134, 192);
     border: 1px solid rgb(199, 218, 28);
     cursor: pointer;
+}
+
+@media (max-width: 820px) {
+    nav {
+        width: 100vw;
+        padding: 0.5vw 1vw;
+        z-index: 999;
+    }
+
+    nav .navigation ul {
+        box-align: center;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+    
+    #menu-cls {
+        display: flex;
+        font-size: 1.6rem;
+        padding: 30px 0 20px 20px;
+        color: rgb(253, 253, 253);
+    }
+
+    nav .navigation ul {
+        position: absolute;
+        top: 0;
+        right: -220px;
+        width: 220px;
+        height: 100vh;
+        background-color: rgba(78, 158, 228, 0.459);
+        backdrop-filter: blur(4.5px) ;
+        border: 1px solid rgba(30, 63, 124, 0.432);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    nav .navigation ul.active {
+        right: 0px;
+    }
+
+    nav .navigation ul li {
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+
+    nav .navigation ul li a {
+        color: rgb(253, 253, 253);
+    }
+
+    #home {
+        padding: 0px;
+    }
+
+    #home p {
+        width: 90%;
+    }
+
+    #features {
+        padding: 8vw 4ww 0vw 4vw;
+    }
+
+    #course {
+        padding: 8vw 4vw 0 4vw;
+    }
+
+    #register{
+        padding: 6vw 4vw 6vw 4vw;
+    }
+
+    #register .reminder .time {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 414px) {
+    #register{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+    }
+
+    #register .form {
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px;
+
+    }
+
+    #register .reminder {
+        color: rgb(255, 255, 255);
+        justify-content: center;
+        text-align: start;
+    }
 }

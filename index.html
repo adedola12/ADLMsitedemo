@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 
@@ -24,12 +25,15 @@
 
         <div class="navigation">
             <ul>
+                <i id="menu-cls" class="fas fa-times"></i>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Courses</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+
+            <img id="menu-btn" src="images/menu.png" alt="">
         </div>
     </nav>
 
@@ -281,6 +285,16 @@
 
 
     </Footer>
+
+    <script>
+        $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        })
+
+        $('#menu-cls').click(function(){
+            $('nav .navigation ul').removeClass('active')
+        })
+    </script>
 
 </body>
 
